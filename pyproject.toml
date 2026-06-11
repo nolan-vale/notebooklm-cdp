@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "notebooklm-cdp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Complete terminal toolkit for Google NotebookLM — CDP auth, chat, source management, content generation, and Studio notes from the command line."
 readme = "README.md"
 license = { text = "MIT" }

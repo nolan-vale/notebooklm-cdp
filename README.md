@@ -16,7 +16,7 @@
 
 Complete terminal toolkit for Google NotebookLM — Chrome-based auth via CDP, chat, source management, content generation, and Studio note access from the command line.
 
-[![PyPI](https://img.shields.io/pypi/v/notebooklm-cdp?color=0ea5e9&label=PyPI)](https://pypi.org/project/notebooklm-cdp/)
+[![PyPI](https://img.shields.io/pypi/v/notebooklm-cdp?color=0ea5e9)](https://pypi.org/project/notebooklm-cdp/)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-0ea5e9.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/license-MIT-0ea5e9.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/nolan-vale/notebooklm-cdp?style=social)](https://github.com/nolan-vale/notebooklm-cdp)
