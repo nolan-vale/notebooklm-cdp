@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "notebooklm-cdp"
+version = "0.1.0"
+description = "Complete terminal toolkit for Google NotebookLM — CDP auth, chat, source management, content generation, and Studio notes from the command line."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [
+    { name = "Nolan Vale" },
+]
+maintainers = [
+    { name = "Nolan Vale Tools" },
+]
+keywords = [
+    "notebooklm",
+    "google",
+    "cli",
+    "cdp",
+    "chrome-devtools-protocol",
+    "playwright",
+    "ai-agents",
+    "llm-tools",
+    "automation",
+    "terminal-tools",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "click>=8.0",
+    "playwright>=1.40",
+    "notebooklm-py>=0.4.0",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/nolan-vale/notebooklm-cdp"
+Repository = "https://github.com/nolan-vale/notebooklm-cdp"
+Issues = "https://github.com/nolan-vale/notebooklm-cdp/issues"
+Changelog = "https://github.com/nolan-vale/notebooklm-cdp/releases"
+
+[project.scripts]
+nlm = "notebooklm_cdp.cli:cli"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/notebooklm_cdp"]
