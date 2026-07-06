@@ -20,16 +20,19 @@ def _run(coro):
     return asyncio.run(coro)
 
 
-def list_notes(notebook: str | None) -> None:
+def _fetch_notes(nb_id: str) -> list:
     from notebooklm.client import NotebookLMClient
-
-    nb_id = _require_notebook(notebook)
 
     async def _fetch():
         async with NotebookLMClient.from_storage() as client:
             return await client.notes.list(nb_id)
 
-    notes = _run(_fetch())
+    return _run(_fetch())
+
+
+def list_notes(notebook: str | None) -> None:
+    nb_id = _require_notebook(notebook)
+    notes = _fetch_notes(nb_id)
 
     if not notes:
         print("No notes found.")
@@ -69,15 +72,8 @@ def read_note(notebook: str | None, ref: str) -> None:
 
 
 def export_notes(notebook: str | None, output: str | None) -> None:
-    from notebooklm.client import NotebookLMClient
-
     nb_id = _require_notebook(notebook)
-
-    async def _fetch():
-        async with NotebookLMClient.from_storage() as client:
-            return await client.notes.list(nb_id)
-
-    notes = _run(_fetch())
+    notes = _fetch_notes(nb_id)
 
     if not notes:
         print("No notes found.")

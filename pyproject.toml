@@ -40,7 +40,7 @@ classifiers = [
 dependencies = [
     "click>=8.0",
     "playwright>=1.40",
-    "notebooklm-py>=0.4.0",
+    "notebooklm-py>=0.7.0",
 ]
 
 [dependency-groups]

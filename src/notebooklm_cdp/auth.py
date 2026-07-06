@@ -50,7 +50,7 @@ def do_login() -> None:
                 break
 
         if not notebooklm_page:
-            print(f"No NotebookLM tab found in Chrome Beta.")
+            print("No NotebookLM tab found in Chrome Beta.")
             print(f"Open https://{NOTEBOOKLM_HOST} in Chrome Beta first.")
             browser.close()
             sys.exit(1)
