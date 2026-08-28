@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "repo_id": "nolan-vale/notebooklm-cdp",
+  "purpose": "Provides a complete terminal toolkit for Google NotebookLM through Chrome-based authentication and programmatic operations.",
+  "objective": null,
+  "sources": [{"role": "overview", "path": "README.md", "verify_live": true}],
+  "exclude": []
+}
